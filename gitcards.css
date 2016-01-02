@@ -2,10 +2,10 @@
 	margin: 10px;
 	padding: 10px;
 	width: 270px;
-	height: 150px;
+	height: 140px;
 	border: 1px solid #d8d8d8;
     border-radius: 3px;
-    font-family: Helvetica, arial, sans-serif;
+    font: 14px / 1.5 Helvetica, arial, sans-serif;
     color: #333;
 }
 .gitcards a {
@@ -35,4 +35,19 @@
 	height: 20px;
 	font-size: 14px;
 	line-height: 18px;
+}
+
+.gitcards .status {
+	margin-top: 10px;
+}
+
+.gitcards .status a {
+	display: inline-block;
+	width: 33.33%;
+	text-align: center;
+	font-size: 12px;
+}
+.gitcards .status strong {
+	display: block;
+	font-size: 14px;
 }

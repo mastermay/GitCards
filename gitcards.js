@@ -13,10 +13,10 @@
 	            		info += '<li><a href="mailto:'+data.email+'" target="_blank">'+data.email+'</a></li>';
 	            		it += 1;
 	            	}
-	            	if(data.blog) {
+	            	/*if(data.blog) {
 	            		info += '<li><a href="'+data.blog+'" target="_blank">'+data.blog+'</a></li>';
 	            		it += 1;
-	            	}
+	            	}*/
 	            	if(it < 2 && data.location) {
 	            		info += '<li>'+data.location+'</li>';
 	            		it += 1;
@@ -29,7 +29,7 @@
 	            		info += '<li>Joined on'+data.created_at.substr(0, 10)+'</li>';
 	            		it += 1;
 	            	}
-					element.append('<div class="user"><img src="' + data.avatar_url + '" /><ul><li><a href="'+data.name+'" target="_blank">'+data.name+'</a></li>'+info+'</ul></div><div class="status"><a href="https://github.com/'+data.login+'/followers"><strong>'+data.followers+'</strong><span>Followers</span></a><a href="https://github.com/'+data.login+'/followers"><strong>'+data.followers+'</strong><span>Followers</span></a><a href="https://github.com/'+data.login+'/following"><strong>'+data.following+'</strong><span>Following</span></a></div>');
+					element.append('<div class="user"><img src="' + data.avatar_url + '" /><ul><li><a href="'+data.name+'" target="_blank">'+data.name+'</a></li>'+info+'</ul></div><div class="status"><a href="https://github.com/'+data.login+'/followers"><strong>'+data.followers+'</strong><span>Followers</span></a><a href="https://github.com/'+data.login+'/following"><strong>'+data.following+'</strong><span>Following</span></a><a href="https://github.com/'+data.login+'?tab=repositories"><strong>'+data.public_repos+'</strong><span>Repositories</span></a></div>');
 	            	console.log(data);
 	            });
 	        } else {
