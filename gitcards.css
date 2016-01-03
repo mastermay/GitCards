@@ -7,6 +7,10 @@
     border-radius: 3px;
     font: 14px / 1.5 Helvetica, arial, sans-serif;
     color: #333;
+    overflow: hidden;
+}
+.gitcards.repo-wrap {
+	height: 98px;
 }
 .gitcards .icon {
 	display: inline-block;
@@ -52,7 +56,9 @@
 }
 
 .gitcards .status {
-	margin-top: 6px;
+	margin-top: 4px;
+	padding-top: 4px;
+	border-top: 1px solid #eee;
 }
 
 .gitcards .status a {
@@ -64,4 +70,39 @@
 .gitcards .status strong {
 	display: block;
 	font-size: 14px;
+}
+.gitcards .repo {
+	position: relative;
+	padding-left: 40px;
+}
+.gitcards .repo .icon{
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: 32px;
+	height: 32px;
+}
+.gitcards .repo span {
+	display: block;
+}
+.gitcards .reponame {
+	font-size: 18px;
+}
+.gitcards .repodesc {
+	font-size: 13px;
+	color: #666;
+}
+.gitcards .loading {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.gitcards .loading svg{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 32px;
+	height: 32px;
+	margin-top: -16px;
+	margin-left: -16px;
 }
