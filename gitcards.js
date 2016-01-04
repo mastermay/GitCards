@@ -26,7 +26,7 @@
 						info += '<li>' + svg_link + '<a href="' + data.blog + '" target="_blank">' + data.blog + '</a></li>';
 						it += 1;
 					}
-					if (it < 3 && data.location) {
+					if (data.location) {
 						info += '<li>' + svg_location + data.location + '</li>';
 						it += 1;
 					}
