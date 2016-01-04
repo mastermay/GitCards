@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/gitcards.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Gitcards by mastermay</title>
+    <title>GitCards by mastermay</title>
   </head>
 
   <body>
@@ -32,6 +32,26 @@
 <a id="gitcards" class="anchor" href="#gitcards" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitCards</h1>
 
 <p>cards for GitHub users &amp; repos</p>
+<h2>Prerequisites</h2>
+<p>jQuery</p>
+<h2>Usage</h2>
+<h3>Setup</h3>
+<p>Include the script in your page</p>
+<pre><code>&lt;script type="text/javascript" src="javascripts/jquery-1.10.0.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="javascripts/gitcards.js"&gt;&lt;/script&gt;</code></pre>
+<h3>Activate</h3>
+<p>Add <code>class="gitcards"</code> in your element</p>
+<blockquote><p>use <code>data-user="username"</code> for a user card</p>
+<p>use <code>data-user="username" data-repo="reponame"</code> for a repo card</p></blockquote>
+<p>Include the script in your page to activate GitCards ;-)</p>
+<pre><code>$(document).ready( function() {
+    $('.gitcards').gitcards();
+});</code></pre>
+<h3>Example</h3>
+<pre><code>&lt;div class="gitcards" data-user="mastermay"&gt;&lt;/div&gt;
+&lt;div class="gitcards" data-user="mastermay" data-repo="GitCards"&gt;&lt;/div&gt;</code></pre>
+<div class="gitcards" data-user="mastermay"></div>
+<div class="gitcards" data-user="mastermay" data-repo="GitCards"></div>
         </section>
 
         <aside id="sidebar">
@@ -53,4 +73,11 @@
 
   
   </body>
+  <script type="text/javascript" src="javascripts/jquery-1.10.0.min.js"></script>
+  <script type="text/javascript" src="javascripts/gitcards.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.gitcards').gitcards();
+  });
+  </script>
 </html>
