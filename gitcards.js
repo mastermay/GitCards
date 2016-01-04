@@ -9,7 +9,7 @@
 			if (!repo) {
 				element.append(loading);
 				github_user(user, function(data) {
-					$('.gitcards .loading').remove();
+					element.children('.loading').remove();
 					data = data.data;
 					var svg_location = '<svg class="icon" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg"><path d="M6 0C2.69 0 0 2.5 0 5.5c0 4.52 6 10.5 6 10.5s6-5.98 6-10.5C12 2.5 9.31 0 6 0z m0 14.55C4.14 12.52 1 8.44 1 5.5 1 3.02 3.25 1 6 1c1.34 0 2.61 0.48 3.56 1.36 0.92 0.86 1.44 1.97 1.44 3.14 0 2.94-3.14 7.02-5 9.05z m2-9.05c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z" /></svg>',
 						svg_link = '<svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z" /></svg>',
@@ -38,7 +38,7 @@
 						info += '<li>' + svg_time + 'Joined on ' + data.created_at.substr(0, 10) + '</li>';
 						it += 1;
 					}
-					element.append('<div class="user"><img src="' + data.avatar_url + '" /><h2><span class="nickname"><a href="https://github.com/' + data.login + '" target="_blank">' + data.name + '</a></span><span class="login">' + data.login + '</span></h2><ul>' + info + '</ul></div><div class="status"><a href="https://github.com/' + data.login + '/followers"><strong>' + data.followers + '</strong><span>Followers</span></a><a href="https://github.com/' + data.login + '/following"><strong>' + data.following + '</strong><span>Following</span></a><a href="https://github.com/' + data.login + '?tab=repositories"><strong>' + data.public_repos + '</strong><span>Repositories</span></a></div>');
+					element.append('<div class="user"><img src="' + data.avatar_url + '" /><p><span class="nickname"><a href="https://github.com/' + data.login + '" target="_blank">' + data.name + '</a></span><span class="login">' + data.login + '</span></p><ul>' + info + '</ul></div><div class="status"><a href="https://github.com/' + data.login + '/followers"><strong>' + data.followers + '</strong><span>Followers</span></a><a href="https://github.com/' + data.login + '/following"><strong>' + data.following + '</strong><span>Following</span></a><a href="https://github.com/' + data.login + '?tab=repositories"><strong>' + data.public_repos + '</strong><span>Repositories</span></a></div>');
 				});
 			} else {
 				var svg_star = '<svg class="icon" viewBox="-1 -1 14 16" xmlns="http://www.w3.org/2000/svg"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z" /></svg>',
@@ -47,7 +47,7 @@
 				element.addClass('repo-wrap');
 				element.append(loading);
 				github_user_repo(user, repo, function(data) {
-					$('.gitcards .loading').remove();
+					element.children('.loading').remove();
 					data = data.data;
 					desc = '';
 					if (data.description) {
