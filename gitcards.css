@@ -1,25 +1,25 @@
 .gitcards{margin:10px;padding:10px;width:270px;height:150px;border:1px solid #d8d8d8;border-radius:3px;font:14px/1.5 Helvetica,arial,sans-serif;color:#333;overflow:hidden;box-sizing:border-box}
 .gitcards p{margin:0;padding:0}
-.gitcards.repo-wrap{height:98px}
-.gitcards .icon{display:inline-block;width:12px;height:12px;margin-right:6px;fill:#666}
+.gitcards.gc-repo-wrap{height:98px}
+.gitcards .gc-icon{display:inline-block;width:12px;height:12px;margin-right:6px;fill:#666}
 .gitcards a{text-decoration:none;color:#333}
 .gitcards a:hover{color:#2879d0}
-.gitcards .user a:hover{border-bottom:1px dashed #666}
-.gitcards .user{position:relative;padding-left:90px}
+.gitcards .gc-user a:hover{border-bottom:1px dashed #666}
+.gitcards .gc-user{position:relative;padding-left:90px}
 .gitcards img{position:absolute;left:0;top:0;width:76px;height:76px;border-radius:38px}
-.gitcards .nickname{font-size:16px}
-.gitcards .login{font-size:12px;color:#666;padding-left:6px}
+.gitcards .gc-nickname{font-size:16px}
+.gitcards .gc-login{font-size:12px;color:#666;padding-left:6px}
 .gitcards ul{list-style:none;margin:0;padding:0}
 .gitcards ul li{height:20px;font-size:14px;line-height:18px}
-.gitcards .status{margin-top:4px;padding-top:4px;border-top:1px solid #f2f2f2}
-.gitcards .status a{display:inline-block;width:33.33%;text-align:center;font-size:12px}
-.gitcards .status strong{display:block;font-size:14px}
-.gitcards .repo{position:relative;padding-left:40px}
-.gitcards .repo .icon{position:absolute;left:0;top:6px;width:32px;height:32px}
-.gitcards .repo span{display:block}
-.gitcards .reponame{font-size:18px}
-.gitcards .repodesc{font-size:13px;color:#666}
-.gitcards .loading{position:relative;height:100%;width:100%}
-.gitcards .loading svg{position:absolute;left:50%;top:50%;width:32px;height:32px;margin-top:-16px;margin-left:-16px;animation:breathe 2s ease-in-out infinite;-webkit-animation:breathe 2s ease-in-out infinite}
+.gitcards .gc-status{margin-top:4px;padding-top:4px;border-top:1px solid #f2f2f2}
+.gitcards .gc-status a{display:inline-block;width:33.33%;text-align:center;font-size:12px}
+.gitcards .gc-status strong{display:block;font-size:14px}
+.gitcards .gc-repo{position:relative;padding-left:40px}
+.gitcards .gc-repo .gc-icon{position:absolute;left:0;top:6px;width:32px;height:32px}
+.gitcards .gc-repo span{display:block}
+.gitcards .gc-reponame{font-size:18px}
+.gitcards .gc-repodesc{font-size:13px;color:#666}
+.gitcards .gc-loading{position:relative;height:100%;width:100%}
+.gitcards .gc-loading svg{position:absolute;left:50%;top:50%;width:32px;height:32px;margin-top:-16px;margin-left:-16px;animation:breathe 2s ease-in-out infinite;-webkit-animation:breathe 2s ease-in-out infinite}
 @keyframes breathe{0%{opacity:.2}50%{opacity:1}100%{opacity:.2}}
 @-webkit-keyframes breathe{0%{opacity:.2}50%{opacity:1}100%{opacity:.2}}
