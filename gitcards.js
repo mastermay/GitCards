@@ -44,13 +44,13 @@
 				var svg_star = '<svg class="gc-icon" viewBox="-1 -1 14 16" xmlns="http://www.w3.org/2000/svg"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z" /></svg>',
 					svg_fork = '<svg class="gc-icon" viewBox="-1 -1 10 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1c-1.11 0-2 0.89-2 2 0 0.73 0.41 1.38 1 1.72v1.28L5 8 3 6v-1.28c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v1.78l3 3v1.78c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V9.5l3-3V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2zM2 4.2c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3 10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3-10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z" /></svg>',
 					svg_repo = '<svg class="gc-icon" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg"><path d="M4 9h-1v-1h1v1z m0-3h-1v1h1v-1z m0-2h-1v1h1v-1z m0-2h-1v1h1v-1z m8-1v12c0 0.55-0.45 1-1 1H6v2l-1.5-1.5-1.5 1.5V14H1c-0.55 0-1-0.45-1-1V1C0 0.45 0.45 0 1 0h10c0.55 0 1 0.45 1 1z m-1 10H1v2h2v-1h3v1h5V11z m0-10H2v9h9V1z" /></svg>';
-				element.addClass('repo-wrap');
+				element.addClass('gc-repo-wrap');
 				element.append(loading);
 				github_user_repo(user, repo, function(data) {
-					element.children('.loading').remove();
+					element.children('.gc-loading').remove();
 					data = data.data;
 					desc = '';
-					if (data.description) {
+					if (!data.description) {
 						desc = 'nodesc';
 					}
 					element.append('<div class="gc-repo ' + desc + '">' + svg_repo + '<a href="' + data.html_url + '" target="_blank"><span class="gc-reponame">' + data.full_name + '</span><span class="gc-repodesc">' + data.description + '</span></a></div><div class="gc-status"><a href="' + data.html_url + '" target="_blank">' + svg_star + '<span>Star ' + data.stargazers_count + '</span></a><a href="' + data.html_url + '" target="_blank">' + svg_fork + '<span>Fork ' + data.forks_count + '</span></a><a href="' + data.html_url + '/archive/master.zip" target="_blank"><span>Download ZIP</span></a></div>');
