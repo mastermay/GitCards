@@ -2,7 +2,7 @@
 .gitcards p{margin:0;padding:0}
 .gitcards.gc-repo-wrap{height:98px}
 .gitcards .gc-icon{display:inline-block;width:12px;height:12px;margin-right:6px;fill:#666}
-.gitcards a{text-decoration:none;color:#333}
+.gitcards a{text-decoration:none;color:#333;border:none}
 .gitcards a:hover{color:#2879d0}
 .gitcards .gc-user a:hover{border-bottom:1px dashed #666}
 .gitcards .gc-user{position:relative;padding-left:90px}
@@ -12,7 +12,8 @@
 .gitcards ul{list-style:none;margin:0;padding:0}
 .gitcards ul li{height:20px;font-size:14px;line-height:18px}
 .gitcards .gc-status{margin-top:4px;padding-top:4px;border-top:1px solid #f2f2f2}
-.gitcards .gc-status a{display:inline-block;width:33.33%;text-align:center;font-size:12px}
+.gitcards .gc-status a{display:inline-block;width:30%;text-align:center;font-size:12px}
+.gitcards .gc-status a:last-child{width:40%}
 .gitcards .gc-status strong{display:block;font-size:14px}
 .gitcards .gc-repo{position:relative;padding-left:40px}
 .gitcards .gc-repo .gc-icon{position:absolute;left:0;top:6px;width:32px;height:32px}
